@@ -29,6 +29,7 @@ const updateAccessToken = async () => {
 
 // 读取 access_token
 const getAccessToken = async () => {
+    // 读取文件
     try {
         // 读取 access_token.json 文件的内容  是字符串类型
         const readRes = fs.readFileSync(fileName, 'utf8')
@@ -39,7 +40,7 @@ const getAccessToken = async () => {
         // 获取当前时间 的毫秒数
         const nowTime = new Date().getTime()
         // 判断 文件里的 access_token 是否已经超过两小时(过期) 如果过期重新 请求 access_token
-        if(nowTime - createTime /1000/60/60 >= 2) {
+        if((nowTime - createTime) /1000/60/60 >= 2) {
             await updateAccessToken() 
             await getAccessToken()
         }
