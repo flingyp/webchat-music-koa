@@ -1,0 +1,17 @@
+{
+  "name": "wechat-music-koa",
+  "version": "1.0.0",
+  "description": "WeChat-music云音乐后台管理系统后端部分",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.11.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  }
+}
