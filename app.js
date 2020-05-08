@@ -4,11 +4,17 @@ const Router = require('koa-router')
 const router = new Router()
 const cors = require('koa2-cors')
 const ENV = 'test-4z53i'
+const koaBody = require('koa-body')
 
 // 跨域
 app.use(cors({
     origin: ['http://localhost:9528'],
     credentials: true
+}))
+
+// 接收POST参数
+app.use(koaBody({
+    multipart: true,
 }))
 
 app.use(async (ctx,next) => {
