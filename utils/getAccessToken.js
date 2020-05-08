@@ -9,6 +9,7 @@ const APPID = 'wx8939d6abe6252f2d'
 const APPSECRET = '6e832d03414aa67a093e55df285d1ce6'
 const URL = `https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${APPID}&secret=${APPSECRET}`
 
+
 // 请求 access_token
 const updateAccessToken = async () => {
     // 获取到接口凭证是字符串类型
@@ -58,7 +59,5 @@ const getAccessToken = async () => {
 setInterval(async () => {
     await updateAccessToken()
 }, (7200 - 300) * 1000);
-
-
 
 module.exports = getAccessToken
