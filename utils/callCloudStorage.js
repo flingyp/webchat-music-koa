@@ -75,7 +75,7 @@ const cloudStorage = {
             uri: `https://api.weixin.qq.com/tcb/batchdeletefile?access_token=${ACCESS_TOKEN}`,
             body: { 
                 env: ctx.state.env,
-                file_id: fileid_list,
+                fileid_list: fileid_list
             },
             json: true
         }
